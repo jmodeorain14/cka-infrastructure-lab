@@ -1,0 +1,73 @@
+# Terraform working directories
+# Terraform creates these directories locally to store downloaded providers,
+# modules, and other initialization data.
+**/.terraform/*
+
+# Terraform state files
+# State files may contain sensitive infrastructure information and should
+# not be committed to version control.
+*.tfstate
+*.tfstate.*
+
+# Terraform variable files
+# These files may contain sensitive values such as passwords, access keys,
+# and other environment-specific configuration.
+*.tfvars
+*.tfvars.json
+
+# Terraform plan files
+# Saved execution plans may contain sensitive configuration and resource data.
+*.tfplan
+*.tfplan.*
+tfplan
+
+# Terraform crash logs
+# Generated when Terraform encounters an unexpected error.
+crash.log
+crash.*.log
+
+# Terraform override files
+# Override files are generally intended for local configuration changes
+# and should not be committed.
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# Terraform CLI configuration files
+# Local Terraform CLI settings may contain credentials or authentication
+# configuration that should remain outside version control
+.terraformrc
+terraform.rc
+
+# SSH private keys
+# Private keys used to authenticate with AWS EC2 instances or other
+# remote systems must never be stored in the repository.
+*.pem
+*.key
+id_rsa
+id_ed25519
+
+# AWS credentials
+# AWS credential files and local configuration must remain outside
+# version control.
+.aws/
+
+# Environment configuration files
+# Environment files may contain credentials, tokens, or other secrets.
+# Example files without real credentials can be committed.
+.env
+.env.*
+!.env.example
+
+# IDE and editor configuration
+# Ignore local editor settings that are specific to individual developers.
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Operating system generated files
+# Ignore system metadata files that are unrelated to the project.
+.DS_Store
+Thumbs.db
